@@ -1,35 +1,19 @@
+import 'package:despesas/pages/homePage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const HomePage());
+  runApp(MyApp());
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Despesas pessoais'),
-          backgroundColor: Colors.purple,
-        ),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Container(
-              width: double.infinity,
-              child: Text('grafico'),
-              color: Colors.blue,
-            ),
-            Card(
-              child: Text('Lista de transaçoes'),
-            )
-          ],
-        ),
+      home: HomePage(),
+      theme: ThemeData(
+        primaryColor: Colors.purple, 
+        fontFamily: 'OpenSans',
       ),
     );
   }
